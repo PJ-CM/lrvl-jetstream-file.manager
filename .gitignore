@@ -1,4 +1,7 @@
+#Archivos varios de documentación
 /___docs
+#Archivos de prueba
+/lang/*_00_*
 
 /node_modules
 /public/hot

@@ -144,6 +144,13 @@ return [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
+        /* -------------------------------------------------------------- */
+        'email'    => [
+            'unique' => 'The :attribute is, already, registered.',
+        ],
+        'password' => [
+            'min' => 'The :attribute must contain more than :min characters',
+        ],
     ],
 
     /*
