@@ -14,7 +14,10 @@ $maxWidth = [
 
 <div
     x-data="{
-        show: @entangle($attributes->wire('model')).defer,
+        {{-- condicional predeterminado --}}
+        {{-- show: @entangle($attributes->wire('model')).defer, --}}
+        {{-- condicional para que salga al entrar --}}
+        show: true,
         focusables() {
             // All focusable element types...
             let selector = 'a, button, input:not([type=\'hidden\']), textarea, select, details, [tabindex]:not([tabindex=\'-1\'])'
