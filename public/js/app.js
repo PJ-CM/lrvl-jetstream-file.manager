@@ -5088,6 +5088,67 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./resources/js/alpine.js":
+/*!********************************!*\
+  !*** ./resources/js/alpine.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+__webpack_require__(/*! ./alpine/guarded-form */ "./resources/js/alpine/guarded-form.js");
+
+__webpack_require__(/*! ./alpine/helpers */ "./resources/js/alpine/helpers.js");
+
+/***/ }),
+
+/***/ "./resources/js/alpine/guarded-form.js":
+/*!*********************************************!*\
+  !*** ./resources/js/alpine/guarded-form.js ***!
+  \*********************************************/
+/***/ (() => {
+
+//alert("Aloha!!");
+window.guardedForm = function () {
+  return {
+    guarded: false,
+    guardForm: function guardForm() {
+      var _this = this;
+
+      window.addEventListener("beforeunload", function (event) {
+        if (_this.guarded === true) {
+          event.returnValue = "...Wait...";
+        }
+      });
+    }
+  };
+};
+
+/***/ }),
+
+/***/ "./resources/js/alpine/helpers.js":
+/*!****************************************!*\
+  !*** ./resources/js/alpine/helpers.js ***!
+  \****************************************/
+/***/ (() => {
+
+//alert("Aloha!!");
+
+/**/
+window.helpers = function () {
+  return {
+    open: false,
+    textButton: "Crear",
+    toggleFormNewReg: function toggleFormNewReg(arrTextButton) {
+      this.open = !this.open;
+      this.textButton = this.open ? arrTextButton[0] : arrTextButton[1];
+    } //isOpen() {
+    //    return this.open === true;
+    //},
+
+  };
+};
+
+/***/ }),
+
 /***/ "./resources/js/app.js":
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
@@ -5101,6 +5162,9 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 
 window.Alpine = alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"];
+
+__webpack_require__(/*! ./alpine */ "./resources/js/alpine.js");
+
 alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
 
 /***/ }),

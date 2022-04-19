@@ -1,9 +1,17 @@
 <div>
-    <div class="flex justify-center">
-        <h1 class="font-bold text-2xl mt-5 mb-24 border-b-2 border-gray-600">Gestor de Archivos Multimedia</h1>
+    <div x-data="helpers">
+        <div class="flex justify-end p-5">
+            <x-button-link
+                x-on:click="toggleFormNewReg(['Cerrar', 'Crear'])">
+                <span x-text="textButton"></span>
+            </x-button-link>
+        </div>
+        <div x-cloak x-show="open">
+            <x-files.create-file trigger="open"></x-files.create-file>
+        </div>
     </div>
 
-    <div class="flex justify-center p-5">
+    <div class="p-5">
         <x-gam-table></x-gam-table>
     </div>
 </div>

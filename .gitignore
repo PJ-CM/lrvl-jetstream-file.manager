@@ -2,6 +2,8 @@
 /___docs
 #Archivos de prueba
 /lang/*_00_*
+/resources/js/alpine/*_00_*
+/resources/views/livewire/*_00_*
 
 /node_modules
 /public/hot

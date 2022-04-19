@@ -15,8 +15,8 @@
             <td class="p-2"><img src="*" alt="El Previo" /></td>
             <td class="p-2">Hace 5 días</td>
             <td class="flex flex-row p-2 justify-center items-center">
-                <x-jet-button class="mr-2 bg-blue-400">Editar</x-jet-button>
-                <x-jet-button class="mr-2 bg-red-500">Borrar</x-jet-button>
+                <x-jet-button class="mr-2 bg-blue-400" x-bind:disabled="creatingNewReg">Editar</x-jet-button>
+                <x-jet-button class="mr-2 bg-red-500" x-bind:disabled="creatingNewReg">Borrar</x-jet-button>
             </td>
         </tr>
         <tr class="odd:bg-sky-100 even:bg-sky-700 even:text-white">
@@ -25,8 +25,8 @@
             <td class="p-2">1972</td>
             <td class="p-2">1961</td>
             <td class="flex flex-row p-2 justify-center items-center">
-                <x-jet-button class="mr-2 bg-blue-400">Editar</x-jet-button>
-                <x-jet-button class="mr-2 bg-red-500">Borrar</x-jet-button>
+                <x-jet-button class="mr-2 bg-blue-400" x-bind:disabled="creatingNewReg">Editar</x-jet-button>
+                <x-jet-button class="mr-2 bg-red-500" x-bind:disabled="creatingNewReg">Borrar</x-jet-button>
             </td>
         </tr>
         <tr class="odd:bg-sky-100 even:bg-sky-700 even:text-white">
@@ -35,8 +35,8 @@
             <td class="p-2">1975</td>
             <td class="p-2">1961</td>
             <td class="flex flex-row p-2 justify-center items-center">
-                <x-jet-button class="mr-2 bg-blue-400">Editar</x-jet-button>
-                <x-jet-button class="mr-2 bg-red-500">Borrar</x-jet-button>
+                <x-jet-button class="mr-2 bg-blue-400" x-bind:disabled="creatingNewReg">Editar</x-jet-button>
+                <x-jet-button class="mr-2 bg-red-500" x-bind:disabled="creatingNewReg">Borrar</x-jet-button>
             </td>
         </tr>
     </tbody>

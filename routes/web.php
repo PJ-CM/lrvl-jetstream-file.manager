@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FilesManagerController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,3 +27,7 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+// Personales...
+
+Route::resource('filesManager', FilesManagerController::class);
