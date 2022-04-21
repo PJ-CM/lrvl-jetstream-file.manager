@@ -10,11 +10,11 @@
 ])
 
 <div x-show="{{ $trigger }}">
-    <h1 class="font-bold text-2xl text-center mt-18">Crear un Nuevo Registro</h1>
+    <h1 class="text-2xl font-bold text-center mt-18">Crear un Nuevo Registro</h1>
     <x-guarded-form
-        class="flex flex-col justify-center w-full bg-gray-100 mt-10 p-10"
+        class="flex flex-col justify-center w-full p-10 mt-10 bg-gray-100"
         method="POST"
-        action="{{ route('filesManager.store') }}"
+        action="{{ route('files-manager.store') }}"
     >
         @csrf
         <x-jet-label class="pl-2" for="title">Nombre del Archivo</x-jet-label>
@@ -26,9 +26,9 @@
         </x-jet-input>
         <x-jet-input-error for="title" class="mt-2" />
 
-        <x-jet-label class="mt-10 pl-2" for="description">Descripción</x-jet-label>
+        <x-jet-label class="pl-2 mt-10" for="description">Descripción</x-jet-label>
         <textarea
-            class="rounded-lg w-full border-gray-300"
+            class="w-full border-gray-300 rounded-lg"
             name="description"
             rows="5"
         ></textarea>
@@ -39,19 +39,19 @@
             <x-jet-input
                 type="file"
                 name="file"
-                class="border border-gray-300 w-full p-5"
+                class="w-full p-5 border border-gray-300"
             />
         </div>
         <x-jet-input-error for="file" class="mt-2" />
 
-        <div class="mt-10 m-auto flex flex-row">
+        <div class="flex flex-row m-auto mt-10">
             <x-jet-button
-                class="rounded-full mr-1"
+                class="mr-1 rounded-full"
                 x-on:click="{{ $trigger }}=false;text='Crear'"
             >
                 Cancelar
             </x-jet-button>
-            <x-jet-button class="rounded-full ml-1">
+            <x-jet-button class="ml-1 rounded-full">
                 Publicar
             </x-jet-button>
         </div>

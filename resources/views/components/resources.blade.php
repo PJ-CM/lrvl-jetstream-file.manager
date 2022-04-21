@@ -1,7 +1,7 @@
 <div>
     <div x-data="helpers">
         <div class="flex justify-center">
-            <h1 class="mt-5 mb-24 text-2xl font-bold border-b-2 border-gray-600">Gestor de Archivos Multimedia</h1>
+            <h1 class="mt-5 mb-24 text-2xl font-bold border-b-2 border-gray-600">Gestor de Archivos Multimedia - Blade</h1>
         </div>
 
         <div class="flex justify-end p-5">
@@ -15,7 +15,7 @@
         </div>
 
         <div class="p-5">
-            <x-gam-table></x-gam-table>
+            <x-gam-table :files="$files"></x-gam-table>
         </div>
     </div>
 </div>

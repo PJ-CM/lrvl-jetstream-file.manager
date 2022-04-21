@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\FilesManagerController;
+use App\Http\Controllers\FileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,11 +23,14 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
+    //Route::get('/dashboard', function () {
+    //    return view('dashboard');
+    //})->name('dashboard');
+    Route::get('/dashboard', [FileController::class, 'index'])
+        ->name('dashboard');
 });
 
 // Personales...
 
-Route::resource('filesManager', FilesManagerController::class);
+Route::resource('files-manager', FileController::class)
+    ->except(['index']);

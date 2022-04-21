@@ -965,6 +965,9 @@ select {
 .col-span-6 {
   grid-column: span 6 / span 6;
 }
+.m-2 {
+  margin: 0.5rem;
+}
 .m-auto {
   margin: auto;
 }
@@ -1041,11 +1044,11 @@ select {
 .mb-4 {
   margin-bottom: 1rem;
 }
-.mr-1 {
-  margin-right: 0.25rem;
-}
 .mb-24 {
   margin-bottom: 6rem;
+}
+.mr-1 {
+  margin-right: 0.25rem;
 }
 .-mt-px {
   margin-top: -1px;
@@ -1445,11 +1448,11 @@ select {
 .p-6 {
   padding: 1.5rem;
 }
-.p-10 {
-  padding: 2.5rem;
-}
 .p-5 {
   padding: 1.25rem;
+}
+.p-10 {
+  padding: 2.5rem;
 }
 .px-4 {
   padding-left: 1rem;

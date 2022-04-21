@@ -30,6 +30,14 @@ return [
 
     'disks' => [
 
+        'files' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/files'),
+            'url' => env('APP_URL').'/files',
+            'visibility' => 'public',
+            'throw' => false,
+        ],
+
         'local' => [
             'driver' => 'local',
             'root' => storage_path('app'),
@@ -70,7 +78,10 @@ return [
     */
 
     'links' => [
-        public_path('storage') => storage_path('app/public'),
+        // Predeterminado...
+        // public_path('storage') => storage_path('app/public'),
+        // Personalizado...
+        public_path('files') => storage_path('app/public/files'),
     ],
 
 ];

@@ -1,0 +1,28 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+
+class File extends Model
+{
+    use HasFactory;
+
+    protected $fillable = [
+        'title',
+        'description',
+        //'path',
+    ];
+
+    public function getUrlAttribute()
+    {
+        return Storage::url($this->path);
+    }
+
+    public function getCreatedAtForHumansAttribute()
+    {
+        return $this->created_at->diffForHumans(now());
+    }
+}
