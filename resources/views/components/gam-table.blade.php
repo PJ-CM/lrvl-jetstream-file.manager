@@ -17,7 +17,7 @@
         <tr class="odd:bg-sky-100 even:bg-sky-700 even:text-white">
             <td class="p-2">{{ $file->title }}</td>
             <td class="p-2">{{ $file->description }}</td>
-            <td class="p-2"><img class="m-2 rounded-lg" src="{{ $file->url }}" alt="{{ $file->title }}<" /></td>
+            <td class="p-2"><img class="m-2 rounded-lg" src="{{ $file->url }}" alt="{{ $file->title }}" /></td>
             <td class="p-2">{{ $file->created_at_for_humans }}</td>
             <td class="flex flex-row items-center justify-center p-2">
                 <x-jet-button class="mr-2 bg-blue-400" x-bind:disabled="open">Editar</x-jet-button>

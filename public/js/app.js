@@ -5128,22 +5128,33 @@ window.guardedForm = function () {
 /*!****************************************!*\
   !*** ./resources/js/alpine/helpers.js ***!
   \****************************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var alpinejs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! alpinejs */ "./node_modules/alpinejs/dist/module.esm.js");
 //alert("Aloha!!");
+// Necesario para el uso de @entangle
+ // Este IMPORT no arregla el ERROR de que no acepte la @
 
 /**/
-window.helpers = function () {
+
+window.helpers = function (config) {
   return {
-    open: false,
+    // open: false,
+    //open: @entangle('open'),
+    open: config.value,
     textButton: "Crear",
     toggleFormNewReg: function toggleFormNewReg(arrTextButton) {
-      this.open = !this.open;
+      this.showHide();
       this.textButton = this.open ? arrTextButton[0] : arrTextButton[1];
-    } //isOpen() {
+    },
+    //isOpen() {
     //    return this.open === true;
     //},
-
+    showHide: function showHide() {
+      this.open = !this.open;
+    }
   };
 };
 

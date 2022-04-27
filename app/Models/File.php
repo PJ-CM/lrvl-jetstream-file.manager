@@ -23,6 +23,9 @@ class File extends Model
 
     public function getCreatedAtForHumansAttribute()
     {
-        return $this->created_at->diffForHumans(now());
+        // X minutos/horas/días/... antes
+        //return $this->created_at->diffForHumans(now());
+        // hace X minutos/horas/días/...
+        return $this->created_at->diffForHumans();
     }
 }
